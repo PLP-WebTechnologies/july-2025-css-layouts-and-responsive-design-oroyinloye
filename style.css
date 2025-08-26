@@ -1,0 +1,107 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4ff;
+  color: #333333;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+nav .nav-links {
+  display: flex; /* Flexbox for horizontal nav */
+  gap: 1rem;
+  list-style: none;
+}
+
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Grid Layout for Main Content */
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Content Section */
+.content {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Flexbox for Cards */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #eaeaea;
+  padding: 1rem;
+  flex: 1 1 30%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #333333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  nav .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
